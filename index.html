@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Colorain</title>
+    <link rel="shortcut icon" href="images/icon.png">
+
+    <link rel="stylesheet" type="text/css" href="./css/colorain.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="./css/animate.css"/>-->
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/underscore.js"></script>
+    <script src="./js/clipboard.js"></script>
+    <script src="./js/colors.js"></script>
+    <script src="./js/colorain.js"></script>
+</head>
+<body>
+<div id="title">
+    <!--<h1>colorain</h1>-->
+    <img id="title-img" src="images/title.png" width="230" class="animated fadeIn">
+    <img id="title-drop" src="images/title-drop.png" width="10" class="animated fadeInDown">
+    <h6>(click and copy to clipboard!)</h6>
+</div>
+
+<div id="rain-div">
+
+</div>
+
+<a id="umbrella">
+    <img src="images/umbrella.png" width="240">
+
+</a>
+
+</body>
+</html>
+
+<script>
+    $('#umbrella').click(function () {
+        addColors();
+    });
+
+</script>

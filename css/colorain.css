@@ -1,0 +1,173 @@
+html, body, h1, h2, h3, h4, h5, h6, hr, li, ul, p, a, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "PingFang SC","Microsoft YaHei",STHeiti,"WenQuanYi Micro Hei",Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+  list-style: none; }
+
+* {
+  position: relative;
+  box-sizing: border-box; }
+
+body {
+  background-color: #FFFFFF;
+  width: 100%; }
+
+#title {
+  width: 230px;
+  margin: 60px auto 0; }
+  #title img#title-img {
+    display: block;
+    margin: 0 auto; }
+  #title img#title-drop {
+    position: absolute;
+    top: 0;
+    left: 81%; }
+  #title h6 {
+    margin-top: 10px;
+    text-align: center;
+    color: #6E7784;
+    font-size: 14px; }
+
+#rain-div {
+  margin: 0 auto;
+  padding: 180px 0 100px;
+  text-align: center; }
+
+.rains {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 230px;
+  margin: 0 100px; }
+
+.rain {
+  position: absolute;
+  transition: all .3s;
+  cursor: pointer; }
+  .rain:hover {
+    width: 48px;
+    height: 68.4px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+
+.rain-0 {
+  top: 0;
+  left: 0;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s; }
+
+.rain-1 {
+  top: 34px;
+  left: 20px;
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  -ms-animation-delay: 0.2s;
+  -o-animation-delay: 0.2s;
+  animation-delay: 0.2s; }
+
+.rain-2 {
+  top: 68px;
+  left: 40px;
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  -ms-animation-delay: 0.4s;
+  -o-animation-delay: 0.4s;
+  animation-delay: 0.4s; }
+
+.rain-3 {
+  top: 102px;
+  left: 60px;
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  -ms-animation-delay: 0.6s;
+  -o-animation-delay: 0.6s;
+  animation-delay: 0.6s; }
+
+.rain-4 {
+  top: 136px;
+  left: 80px;
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  -ms-animation-delay: 0.8s;
+  -o-animation-delay: 0.8s;
+  animation-delay: 0.8s; }
+
+.hex-string {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  color: #CCCCCC;
+  font-family: "Avenir Next";
+  font-size: 18px;
+  font-weight: 400; }
+
+#umbrella {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: all .5s;
+  cursor: pointer; }
+  #umbrella:hover {
+    bottom: 0;
+    transition: all .5s; }
+
+/* animated */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn; }
+
+/*# sourceMappingURL=colorain.css.map */

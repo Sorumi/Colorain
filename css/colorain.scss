@@ -1,0 +1,215 @@
+@import "mixin";
+
+$white-color: #FFFFFF;
+$gray-color: #CCCCCC;
+$dark-color: #6E7784;
+$main-color: #DFEFEF;
+
+
+html, body, h1, h2, h3, h4, h5, h6, hr, li, ul, p, a, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  //color: $gray-1;
+  //font-size: 14px;
+  font-family: "PingFang SC","Microsoft YaHei",STHeiti,"WenQuanYi Micro Hei",Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+  list-style: none;
+}
+
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $white-color;
+  width: 100%;
+  //height: 200%;
+  //overflow: hidden;
+}
+
+#title {
+  //position: absolute;
+  width: 230px;
+  //top: 60px;
+  margin: 60px auto 0;
+  //
+  //h1 {
+  //  text-align: center;
+  //  font-family: "Futura";
+  //  font-size: 64px;
+  //  color: $main-color;
+  //}
+
+  img#title-img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  img#title-drop {
+    position: absolute;
+    top: 0;
+    left: 81%;
+  }
+
+  h6 {
+    margin-top: 10px;
+    text-align: center;
+    color: $dark-color;
+    font-size: 14px;
+  }
+
+}
+
+#rain-div {
+  margin: 0 auto;
+  padding: 180px 0 100px;
+  text-align: center;
+  //width: 1000px;
+}
+
+.rains {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 230px;
+  margin: 0 100px;
+}
+
+.rain {
+  position: absolute;
+  transition: all .3s;
+  cursor: pointer;
+  &:hover {
+    width: 48px;
+    height: 68.4px;
+    //@include transform(translate(-100px, 0));
+    @include transition(all .3s);
+  }
+}
+
+.rain-0 {
+  top: 0;
+  left: 0;
+  @include animation-delay(0s);
+}
+
+.rain-1 {
+  top: 34px;
+  left: 20px;
+  @include animation-delay(.2s);
+}
+
+.rain-2 {
+  top: 68px;
+  left: 40px;
+  @include animation-delay(.4s);
+}
+
+.rain-3 {
+  top: 102px;
+  left: 60px;
+  @include animation-delay(.6s);
+}
+
+.rain-4 {
+  top: 136px;
+  left: 80px;
+  @include animation-delay(.8s);
+}
+
+.hex-string {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  @include transform(translate(-50%, 0));
+  color: $gray-color;
+  font-family: "Avenir Next";
+  font-size: 18px;
+  font-weight: 400;
+}
+
+#umbrella {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: all .5s;
+  cursor: pointer;
+
+  &:hover {
+    bottom: 0;
+    transition: all .5s;
+  }
+}
+
+
+/* animated */
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}

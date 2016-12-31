@@ -1,0 +1,56 @@
+$prefix-for-webkit: true !default;
+$prefix-for-mozilla: true !default;
+$prefix-for-microsoft: true !default;
+$prefix-for-opera: true !default;
+$prefix-for-spec: true !default;
+
+$all: webkit moz ms o spec;
+
+@mixin prefixer ($property, $value, $prefixes) {
+  @each $prefix in $prefixes {
+    @if $prefix == webkit and $prefix-for-webkit == true {
+      -webkit-#{$property}: $value;
+    }
+    @else if $prefix == moz and $prefix-for-mozilla == true {
+      -moz-#{$property}: $value;
+    }
+    @else if $prefix == ms and $prefix-for-microsoft == true {
+      -ms-#{$property}: $value;
+    }
+    @else if $prefix == o and $prefix-for-opera == true {
+      -o-#{$property}: $value;
+    }
+    @else if $prefix == spec and $prefix-for-spec == true {
+      #{$property}: $value;
+    }
+    @else {
+      @warn "Unrecognized prefix: #{$prefix}";
+    }
+  }
+}
+
+@mixin border-radius($radius...) {
+  @include prefixer(border-radius, $radius, $all);
+}
+
+@mixin transition($property...) {
+  @include prefixer(transition, $property, $all);
+}
+
+@mixin box-shadow($shadow...) {
+  @include prefixer(box-shadow, $shadow, $all);
+}
+
+@mixin box-sizing($type:border-box) {
+  // border-box | padding-box | content-box
+  @include prefixer(box-sizing, $type, $all);
+}
+
+@mixin transform($property...) {
+  @include prefixer(transform, $property, $all);
+}
+
+
+@mixin animation-delay($property...) {
+  @include prefixer(animation-delay, $property, $all);
+}
