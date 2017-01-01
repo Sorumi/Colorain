@@ -4,13 +4,17 @@
 
 window.onload = function () {
     addColors();
-
-
 }
+
+var rainButton;
 
 function addColors() {
 
     var rainDiv = document.getElementById('rain-div');
+    if (rainButton != null) {
+        rainButton.destroy();
+    }
+
     rainDiv.innerHTML = "";
 
     var colorsArray = _.sample(allColors, 3);
@@ -40,7 +44,23 @@ function addColors() {
         //console.log(colors);
     }
 
-    new Clipboard('.rain');
+    $('.rain').qtip({
+        content: {
+            text: 'Copied!'
+        },
+        show: {
+            event: 'click'
+        },
+        position: {
+            my: 'right top', at: 'center left'
+        },
+        style: {
+            classes: 'qtip-mint qtip-rounded'
+        }
+    })
+
+    rainButton = new Clipboard('.rain');
+
 
     $('.rain').mouseenter(function (event) {
         //console.log($(svg.currentTarget).nextAll().filter('.hex-string'));

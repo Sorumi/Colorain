@@ -2,7 +2,7 @@
 
 $white-color: #FFFFFF;
 $gray-color: #CCCCCC;
-$dark-color: #6E7784;
+$dark-color: #618B8F;
 $main-color: #DFEFEF;
 $main-color-darken: #92C1BD;
 
@@ -85,6 +85,7 @@ body {
   transition: all .3s;
   cursor: pointer;
   &:hover {
+    //z-index: 5;
     width: 48px;
     height: 68.4px;
     //@include transform(translate(-100px, 0));
@@ -93,30 +94,35 @@ body {
 }
 
 .rain-0 {
+  z-index: 0;
   top: 0;
   left: 0;
   @include animation-delay(0s);
 }
 
 .rain-1 {
+  z-index: 1;
   top: 34px;
   left: 20px;
   @include animation-delay(.2s);
 }
 
 .rain-2 {
+  z-index: 2;
   top: 68px;
   left: 40px;
   @include animation-delay(.4s);
 }
 
 .rain-3 {
+  z-index: 3;
   top: 102px;
   left: 60px;
   @include animation-delay(.6s);
 }
 
 .rain-4 {
+  z-index: 4;
   top: 136px;
   left: 80px;
   @include animation-delay(.8s);
@@ -182,6 +188,22 @@ body {
     }
   }
 }
+
+
+.qtip-mint {
+  background-color: $main-color;
+  border-color: transparent;
+  color: $main-color-darken;
+}
+
+.qtip-mint .qtip-titlebar {
+  background-color: $main-color;
+}
+
+.qtip-mint .qtip-close .qtip-icon {
+  background-position: -2px 0;
+}
+
 
 
 /* animated */
