@@ -1,5 +1,5 @@
 # Colorain
 
-[colorain.sorumi.me](http://colorain.sorumi.me)
+[colorain.sorumi.xyz](http://colorain.sorumi.xyz)
 
 A lovely color palette collection.
